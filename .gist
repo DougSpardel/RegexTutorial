@@ -1,0 +1,71 @@
+# Hex Value Matching Regex Tutorial
+
+In this tutorial, we'll explore how to use a regular expression to validate hex values commonly used in web development for color codes. Understanding this regex will provide insight into various regex components and their application.
+
+## Summary
+
+We'll dissect the regex pattern `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/` designed to match hex color codes which can be either 3 or 6 characters long, optionally preceded by a `#`.
+
+## Table of Contents
+
+- [Anchors](#anchors)
+- [Quantifiers](#quantifiers)
+- [OR Operator](#or-operator)
+- [Character Classes](#character-classes)
+- [Flags](#flags)
+- [Grouping and Capturing](#grouping-and-capturing)
+- [Bracket Expressions](#bracket-expressions)
+- [Greedy and Lazy Match](#greedy-and-lazy-match)
+- [Boundaries](#boundaries)
+- [Back-references](#back-references)
+- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
+
+## Regex Components
+
+### Anchors
+
+`^` and `$` are anchors that match the start and end of a string, ensuring the entire string conforms to the pattern.
+
+### Quantifiers
+
+`{6}` and `{3}` are quantifiers that ensure the hex digits appear exactly 3 or 6 times.
+
+### OR Operator
+
+The `|` operator allows for alternative matches, accommodating both 3-character and 6-character hex values.
+
+### Character Classes
+
+`[a-f0-9]` defines a character class that allows lowercase letters from a to f and digits, relevant to hex values.
+
+### Flags
+
+No flags are used with this pattern as hex validation is case-sensitive and straightforward without additional modifiers.
+
+### Grouping and Capturing
+
+`(...)` groups together the 6-character and 3-character patterns allowing the OR operator to apply to the entire grouped expressions.
+
+### Bracket Expressions
+
+Bracket expressions are utilized within `[a-f0-9]` to denote the range of valid characters for a hex value.
+
+### Greedy and Lazy Match
+
+Greedy and lazy matching concepts aren't directly applicable here as the quantifiers are explicitly defined.
+
+### Boundaries
+
+Word boundaries aren't used in this regex since the anchors provide full-string matching constraints.
+
+### Back-references
+
+Back-references are not utilized in this regex pattern.
+
+### Look-ahead and Look-behind
+
+Look-ahead and look-behind assertions are not required for this basic hex value validation.
+
+## Author
+
+This tutorial was created by Doug Spardel. For more insightful content and tutorials, visit my [GitHub profile](https://github.com/DougSpardel).
